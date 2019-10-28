@@ -6,20 +6,26 @@
 	<script src="https://d3js.org/d3.v5.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="main.css">
 
 </head>
 <body>
-	<div id="header" style="text-align: center;">
-	<h1>Hi, Welcome to the study planner</h1>
-	<ul style="list-style-type:none; justify-content: left;">
-	<li> How to use:<li>
-	<li>hover over the box for description</li>
-	<li>click the module's text to add into the calendar on the left</li>
-	<li>click any mod in the calendar(on the left) to remove the module</li>
-	<li>check overload box if you are overloading.</li>
-</ul>
-	<p> Please choose your pillar: 
+	<div class="header-container">
+	<header class="page-header">
+	  <h1 class="banner-text">Hi, Welcome to the study planner</h1>
+	</div>
+	</header>	
+
+	<section class="function-content">
+	  <ul class="function-list">
+	    <li> How to use:</li>
+	    <li>hover over the box for description</li>
+	    <li>click the module's text to add into the calendar on the left</li>
+	    <li>click any mod in the calendar(on the left) to remove the module</li>
+	    <li>check overload box if you are overloading.</li>
+	  </ul>
+	<p class="form-instructions"> Please choose your pillar: 
 		<select id="pillar">
 			<option value="NA">-</option>
 			<option value="ESD">ESD</option>
@@ -28,22 +34,23 @@
 			<option value="ASD">ASD(future dev)</option>
 		</select>
 	</p>
-	<button onclick="NaivePlanner()">Submit</button>
-	</div>	
+	<button class="form-button" onclick="NaivePlanner()">Submit</button>
+	
+    </section>
 
-	<div id="trackAndMinor"  style="text-align: center;">
-		<ul style="list-style-type:none">
+	<section class="track-and-minor">
+		<ul class="track-and-minor-list">
 			<li><strong>According to your pillar and subject choices, you will be graduating with:</strong></li>
 			<li><strong>Track:</strong><span id="track"></span></li>
 			<li><strong>Minor:</strong><span id="minor"></span></li>
 		</ul>
-	</div>
+	</section>
 	<p>
-	<div id="container">
+	<section class="result-container">
 		<div id="calendar"></div>
 		<div id="subjects"></div>
 	    <div id="clear"></div>
-	</div>
+	</section>
 
 	<script src="index.js"></script>
 </body>
